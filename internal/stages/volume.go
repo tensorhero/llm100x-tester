@@ -9,8 +9,8 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/bootlab-dev/tester-utils/test_case_harness"
-	"github.com/bootlab-dev/tester-utils/tester_definition"
+	"github.com/hellobyte-dev/tester-utils/test_case_harness"
+	"github.com/hellobyte-dev/tester-utils/tester_definition"
 )
 
 // 期望的哈希值 (CS50 提供的)

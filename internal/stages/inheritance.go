@@ -9,8 +9,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/bootlab-dev/tester-utils/test_case_harness"
-	"github.com/bootlab-dev/tester-utils/tester_definition"
+	"github.com/hellobyte-dev/tester-utils/test_case_harness"
+	"github.com/hellobyte-dev/tester-utils/tester_definition"
 )
 
 func inheritanceTestCase() tester_definition.TestCase {

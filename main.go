@@ -3,8 +3,8 @@ package main
 import (
 	"os"
 
-	"github.com/bootlab-dev/llm100x-tester/internal/stages"
-	tester_utils "github.com/bootlab-dev/tester-utils"
+	"github.com/hellobyte-dev/llm100x-tester/internal/stages"
+	tester_utils "github.com/hellobyte-dev/tester-utils"
 )
 
 func main() {

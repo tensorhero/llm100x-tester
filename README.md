@@ -5,7 +5,7 @@ Automated testing tool for the LLM100X course.
 ## Option 1: Build from Source
 
 ```bash
-git clone https://github.com/bootlab-dev/llm100x-tester
+git clone https://github.com/hellobyte-dev/llm100x-tester
 cd llm100x-tester
 go build .
 ./llm100x-tester -s hello -d ~/my-solution/hello
@@ -38,7 +38,7 @@ Usage: `chmod +x test.sh && ./test.sh hello`
 **Local build (optional)**
 
 ```bash
-git clone https://github.com/bootlab-dev/llm100x-tester
+git clone https://github.com/hellobyte-dev/llm100x-tester
 cd llm100x-tester
 docker build -t my-tester .
 # Usage: docker run --rm --user $(id -u):$(id -g) -v ~/my-solution:/workspace my-tester -s hello -d /workspace/hello

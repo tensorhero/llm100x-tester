@@ -8,9 +8,9 @@ import (
 
 	_ "github.com/mattn/go-sqlite3"
 
-	"github.com/bootlab-dev/llm100x-tester/internal/helpers"
-	"github.com/bootlab-dev/tester-utils/test_case_harness"
-	"github.com/bootlab-dev/tester-utils/tester_definition"
+	"github.com/hellobyte-dev/llm100x-tester/internal/helpers"
+	"github.com/hellobyte-dev/tester-utils/test_case_harness"
+	"github.com/hellobyte-dev/tester-utils/tester_definition"
 )
 
 func moviesTestCase() tester_definition.TestCase {

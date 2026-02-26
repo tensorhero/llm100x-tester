@@ -1,11 +1,11 @@
-module github.com/bootlab-dev/llm100x-tester
+module github.com/hellobyte-dev/llm100x-tester
 
 go 1.24
 
 toolchain go1.24.12
 
 require (
-	github.com/bootlab-dev/tester-utils v1.2.0
+	github.com/hellobyte-dev/tester-utils v1.3.0
 	github.com/mattn/go-sqlite3 v1.14.33
 	github.com/stretchr/testify v1.10.0
 )
@@ -22,5 +22,5 @@ require (
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
 
-// 本地开发时使用：go mod edit -replace github.com/bootcs-cn/tester-utils=../../bootcs-tester-utils
-// replace github.com/bootcs-cn/tester-utils => ../../bootcs-tester-utils
+// 本地开发时使用：取消注释并注释上方 require 中的版本号
+// replace github.com/hellobyte-dev/tester-utils => ../../../hellobyte-tester-utils

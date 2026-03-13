@@ -19,8 +19,8 @@ go build .
 
 ```bash
 cd ~/my-solution  # your solution root directory
-docker pull tensorhero/llm100x-tester
-docker run --rm --user $(id -u):$(id -g) -v "$(pwd):/workspace" tensorhero/llm100x-tester -s hello -d /workspace/hello
+docker pull ghcr.io/tensorhero/llm100x-tester:latest
+docker run --rm --user $(id -u):$(id -g) -v "$(pwd):/workspace" ghcr.io/tensorhero/llm100x-tester:latest -s hello -d /workspace/hello
 ```
 
 **Simplified script (recommended)**
@@ -29,7 +29,7 @@ Create `test.sh` in your solution root:
 
 ```bash
 #!/bin/bash
-docker run --rm --user $(id -u):$(id -g) -v "$(pwd):/workspace" tensorhero/llm100x-tester \
+docker run --rm --user $(id -u):$(id -g) -v "$(pwd):/workspace" ghcr.io/tensorhero/llm100x-tester:latest \
   -s "${1:-hello}" -d "/workspace/${1:-hello}"
 ```
 

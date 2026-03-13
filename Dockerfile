@@ -3,7 +3,7 @@
 # This Dockerfile builds llm100x-tester using the published tester-utils from GitHub
 # Build from the llm100x-tester directory:
 #   cd llm100x-tester
-#   docker build -t tensorhero/llm100x-tester .
+#   docker build -t ghcr.io/tensorhero/llm100x-tester .
 
 # Stage 1: Build the Go binary
 FROM golang:1.24-bookworm AS builder
@@ -13,7 +13,7 @@ WORKDIR /app
 # Copy go module files first for better caching
 COPY go.mod go.sum ./
 
-# Download dependencies from GitHub (uses tester-utils v1.0.0)
+# Download dependencies from GitHub
 RUN go mod download
 
 # Copy the rest of the project
@@ -21,7 +21,7 @@ COPY . .
 
 # Build the binary with CGO enabled (required for SQLite)
 RUN CGO_ENABLED=1 GOOS=linux go build \
-    -o bcs100x-tester \
+    -o llm100x-tester \
     -ldflags="-s -w" \
     .
 
@@ -58,7 +58,7 @@ RUN pip3 install --no-cache-dir --break-system-packages \
 RUN useradd -m -s /bin/bash tester
 
 # Copy the binary from builder
-COPY --from=builder /app/bcs100x-tester /usr/local/bin/bcs100x-tester
+COPY --from=builder /app/llm100x-tester /usr/local/bin/llm100x-tester
 
 # Set working directory
 WORKDIR /workspace
@@ -67,5 +67,5 @@ WORKDIR /workspace
 USER tester
 
 # Default command shows help
-ENTRYPOINT ["bcs100x-tester"]
+ENTRYPOINT ["llm100x-tester"]
 CMD ["--help"]

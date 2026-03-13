@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/hellobyte-dev/tester-utils/runner"
-	"github.com/hellobyte-dev/tester-utils/test_case_harness"
-	"github.com/hellobyte-dev/tester-utils/tester_definition"
+	"github.com/tensorhero/tester-utils/runner"
+	"github.com/tensorhero/tester-utils/test_case_harness"
+	"github.com/tensorhero/tester-utils/tester_definition"
 )
 
 func sentimentalCashTestCase() tester_definition.TestCase {

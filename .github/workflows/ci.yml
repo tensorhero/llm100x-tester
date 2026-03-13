@@ -14,7 +14,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: hellobyte-dev/llm100x-tester
+  IMAGE_NAME: tensorhero/llm100x-tester
 
 jobs:
   unit-test:
@@ -63,14 +63,14 @@ jobs:
           platforms: linux/amd64
           push: false
           load: true
-          tags: ghcr.io/hellobyte-dev/llm100x-tester:test
+          tags: ghcr.io/tensorhero/llm100x-tester:test
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
       - name: Checkout solution repository
         uses: actions/checkout@v4
         with:
-          repository: hellobyte-dev/llm100x-solution
+          repository: tensorhero/llm100x-solution
           token: ${{ secrets.SOLUTION_REPO_PAT }}
           path: solution
 
@@ -90,7 +90,7 @@ jobs:
           FAILED=()
           for stage in "${STAGES[@]}"; do
             echo "Testing $stage..."
-            if docker run --rm --user $(id -u):$(id -g) -v "$(pwd):/workspace" ghcr.io/hellobyte-dev/llm100x-tester:test \
+            if docker run --rm --user $(id -u):$(id -g) -v "$(pwd):/workspace" ghcr.io/tensorhero/llm100x-tester:test \
               -s "$stage" -d "/workspace/$stage"; then
               echo "✓ $stage passed"
             else

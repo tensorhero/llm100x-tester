@@ -3,7 +3,7 @@
 # This Dockerfile builds llm100x-tester using the published tester-utils from GitHub
 # Build from the llm100x-tester directory:
 #   cd llm100x-tester
-#   docker build -t bootcs/bcs100x-tester .
+#   docker build -t tensorhero/llm100x-tester .
 
 # Stage 1: Build the Go binary
 FROM golang:1.24-bookworm AS builder

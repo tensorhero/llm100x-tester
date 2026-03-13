@@ -1,7 +1,7 @@
 package stages
 
 import (
-	"github.com/hellobyte-dev/tester-utils/tester_definition"
+	"github.com/tensorhero/tester-utils/tester_definition"
 )
 
 // GetDefinition 返回 tester 的完整定义

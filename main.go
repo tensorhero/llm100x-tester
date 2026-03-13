@@ -3,8 +3,8 @@ package main
 import (
 	"os"
 
-	"github.com/hellobyte-dev/llm100x-tester/internal/stages"
-	tester_utils "github.com/hellobyte-dev/tester-utils"
+	"github.com/tensorhero/llm100x-tester/internal/stages"
+	tester_utils "github.com/tensorhero/tester-utils"
 )
 
 func main() {

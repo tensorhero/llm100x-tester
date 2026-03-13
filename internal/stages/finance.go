@@ -16,8 +16,8 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/hellobyte-dev/tester-utils/test_case_harness"
-	"github.com/hellobyte-dev/tester-utils/tester_definition"
+	"github.com/tensorhero/tester-utils/test_case_harness"
+	"github.com/tensorhero/tester-utils/tester_definition"
 )
 
 const (
@@ -65,7 +65,7 @@ func startFlaskServer(workDir string, port int, logger interface {
 	env := os.Environ()
 	env = append(env, "FLASK_APP=app.py")
 	env = append(env, "FLASK_ENV=development")
-	env = append(env, "BOOTLLM_TEST_MODE=1") // Enable mock lookup
+	env = append(env, "TENSORHERO_TEST_MODE=1") // Enable mock lookup
 	env = append(env, fmt.Sprintf("FLASK_RUN_PORT=%d", port))
 
 	// Start Flask using python -m flask run

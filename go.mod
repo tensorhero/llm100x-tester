@@ -1,13 +1,13 @@
-module github.com/hellobyte-dev/llm100x-tester
+module github.com/tensorhero/llm100x-tester
 
 go 1.24
 
 toolchain go1.24.12
 
 require (
-	github.com/hellobyte-dev/tester-utils v1.3.0
 	github.com/mattn/go-sqlite3 v1.14.33
 	github.com/stretchr/testify v1.10.0
+	github.com/tensorhero/tester-utils v1.5.0
 )
 
 require (
@@ -23,4 +23,4 @@ require (
 )
 
 // 本地开发时使用：取消注释并注释上方 require 中的版本号
-// replace github.com/hellobyte-dev/tester-utils => ../../../hellobyte-tester-utils
+// replace github.com/tensorhero/tester-utils => ../../../tensorhero-tester-utils
